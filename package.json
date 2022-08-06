@@ -1,0 +1,31 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio for professional information.",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass ./public/sass/main.scss ./public/css/main.css -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itschirag-me/itschirag-me.github.io.git"
+  },
+  "keywords": [
+    "portfolio",
+    "html",
+    "css",
+    "scss",
+    "node",
+    "javascript",
+    "react",
+    "script",
+    "sass"
+  ],
+  "author": "itschirag-me",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itschirag-me/itschirag-me.github.io/issues"
+  },
+  "homepage": "https://github.com/itschirag-me/itschirag-me.github.io#readme"
+}
