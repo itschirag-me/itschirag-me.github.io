@@ -2,15 +2,75 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/css/main.css">
-    <title>itschirag-me</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="public/css/main.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <title>itschirag me</title>
 </head>
 
 <body>
-    <script src="public/script/main.js"></script>
+  <header class="header" id="">
+    <nav class="nav">
+      <span class="nav__logo">
+        <img src="./public/assets/img/bimoji.png" alt="Logo" class="nav__logo-img">
+      </span>
+      <i class="nav__menu-icon" data-feather="menu" id="nav-menu-btn"></i>
+      <div class="nav__menu nav__menu-hide" id="nav-menu">
+        <i class="nav__menu-icon" data-feather="x" id="nav-close-btn"></i>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              <span class="nav__link-num">01.</span>
+              About
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              <span class="nav__link-num">02.</span>
+              Projects
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              <span class="nav__link-num">03.</span>
+              Resume
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+  </header>
+  <div class="contact">
+    <div class="contact__left">
+      <a href="#" class="contact__link">
+        <i class="contact__icons" data-feather="twitter"></i>
+      </a>
+      <a href="#" class="contact__link">
+        <i class="contact__icons" data-feather="instagram"></i>
+      </a>
+      <a href="#" class="contact__link">
+        <i class="contact__icons" data-feather="facebook"></i>
+      </a>
+      <a href="#" class="contact__link">
+        <i class="contact__icons" data-feather="linkedin"></i>
+      </a>
+    </div>
+    <div class="contact__right">
+      <a href="mailto:imchirag2000@gmail.com" class="contact__email">imchirag2000@gmail.com</a>
+    </div>
+  </div>
+  <script src="public/script/main.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    feather.replace()
+  </script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
