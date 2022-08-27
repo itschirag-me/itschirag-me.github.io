@@ -36,10 +36,39 @@ body {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppin";
   font-size: 62.5%;
-  background-color: #21212e;
+  background-color: #27273d;
+}
+body::after {
+  position: absolute;
+  content: "</>";
+  z-index: 0;
+  font-family: "Source code";
+  letter-spacing: -2rem;
+  color: #2e2e49;
+  font-size: 15rem;
+  font-weight: 600;
+  transform: rotate(-20deg);
+  top: 7%;
+  left: 8%;
+}
+body::before {
+  position: absolute;
+  content: "{}";
+  z-index: 0;
+  font-family: "Source code";
+  color: #2e2e49;
+  font-size: 15rem;
+  font-weight: 600;
+  transform: rotate(20deg);
+  bottom: 10%;
+  right: 10%;
 }
 
 a {
@@ -76,12 +105,18 @@ a {
   -> big-desktop
   */
 .nav {
+  position: fixed;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  z-index: 300;
   height: 6rem;
   padding: 2rem;
+  background-color: rgba(39, 39, 61, 0.8);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 .nav__menu {
   width: 40%;
@@ -127,7 +162,7 @@ a {
   -> big-desktop
   */
 .contact {
-  position: sticky;
+  position: fixed;
   bottom: 0;
   width: 100%;
   display: flex;
@@ -142,6 +177,9 @@ a {
   transform: translateY(-0.2rem);
   transition: all 0.5s;
   color: #7996fe;
+}
+.contact__icons {
+  width: 1.2rem;
 }
 .contact__icons:hover {
   stroke: #7996fe;
@@ -187,7 +225,92 @@ a {
 
 .header {
   height: 100vh;
-  background-color: #21212e;
+  background-color: #27273d;
+  z-index: 10;
+}
+.header__container {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 100%;
+}
+.header__heading {
+  position: relative;
+  font-size: 10rem;
+  color: #27273d;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  text-shadow: -1px 0 #7996fe, 0 1px #7996fe, 1px 0 #7996fe, 0 -1px #7996fe;
+  margin-top: -1.5rem;
+  z-index: 10;
+}
+.header__heading:hover {
+  color: #7996fe;
+}
+.header__heading-border {
+  font-size: 10rem;
+  color: #27273d;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  margin-top: -1.5rem;
+  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+  z-index: 10;
+}
+.header__heading-border:hover {
+  color: #fff;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 70%;
+  height: 100vh;
+  z-index: 10;
+}
+.about__container {
+  min-height: 30rem;
+  max-height: 40rem;
+  font-family: "Poppin";
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0.2rem;
+  overflow: hidden;
+}
+.about__left {
+  background: linear-gradient(to right, rgba(121, 150, 254, 0.9), rgba(121, 150, 254, 0.6), rgba(121, 150, 254, 0.9)), url(../assets/img/bg_about.jpg);
+  content: "";
+  width: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about__right {
+  width: 50%;
+  padding: 1rem;
+  background-color: #27273d;
+  color: #fff;
+}
+.about__heading {
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+}
+.about__heading-num {
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-family: "Source code";
+  color: #7996fe;
+}
+.about__paragraph {
+  font-size: 1rem;
+  padding: 0.4rem;
+  text-align: justify;
 }
 
 /*# sourceMappingURL=main.css.map */
